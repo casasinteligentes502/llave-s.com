@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Llaves 24.7 | Cerrajería Automotriz y Residencial</title>
+  <meta name="description" content="Expertos en llaves con chip, controles, carcasas, apertura de autos, apertura de chapas, cambios de registro e instalación de chapas. Servicio rápido en todas las zonas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    #emergencia.emergencia-doble-imagen{
+      display:grid !important;
+      grid-template-columns:1fr 1fr 1fr !important;
+      gap:24px !important;
+      align-items:center !important;
+      padding:70px 6% !important;
+    }
+
+    #emergencia.emergencia-doble-imagen .image-panel{
+      width:100% !important;
+      min-height:360px !important;
+      border-radius:28px !important;
+      overflow:hidden !important;
+      background:#050505 !important;
+      border:1px solid rgba(255,255,255,.12) !important;
+      box-shadow:0 24px 70px rgba(0,0,0,.55) !important;
+      display:flex !important;
+      align-items:center !important;
+      justify-content:center !important;
+    }
+
+    #emergencia.emergencia-doble-imagen .image-panel img{
+      width:100% !important;
+      height:430px !important;
+      object-fit:cover !important;
+      object-position:center center !important;
+      border-radius:28px !important;
+      padding:0 !important;
+      background:#050505 !important;
+      display:block !important;
+    }
+
+    #emergencia.emergencia-doble-imagen .image-panel:first-child img{
+      object-fit:contain !important;
+      padding:10px !important;
+    }
+
+    @media (max-width:900px){
+      #emergencia.emergencia-doble-imagen{
+        grid-template-columns:1fr !important;
+      }
+
+      #emergencia.emergencia-doble-imagen .image-panel img{
+        height:330px !important;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <!-- CAMBIAR AQUÍ: teléfono y redes cuando el cliente los entregue -->
+  <script>
+    const PHONE = "50258453733";
+    const WHATSAPP_TEXT = "Hola Llaves 24.7, necesito ayuda con una llave o apertura.";
+  </script>
+
+  <header class="topbar">
+    <a href="#inicio" class="brand brand-logo"><img src="assets/logo-llaves247.png" alt="Llaves 24.7"></a>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#emergencia">Emergencias</a>
+      <a href="#pagos">Pagos</a>
+      <a href="#contacto" class="nav-cta">Llamar ahora</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Expertos en llaves</h1>
+        <p class="hero-text">Llaves con chip, controles, carcasas, reparación de controles y reposición de llaves perdidas de autos.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary whatsapp-link" href="#">📞 Llamar ahora</a>
+          <a class="btn btn-outline" href="#servicios">Ver servicios</a>
+        </div>
+        <div class="trust-row">
+          <span>✅ Todas las zonas</span>
+          <span>✅ A domicilio</span>
+          <span>✅ Tarjeta y transferencia</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="assets/programacion-chip.png" alt="Programación de llaves con chip" />
+      </div>
+    </section>
+
+    <section class="slogan">
+      <p>Abrimos su tranquilidad, no solo sus puertas.</p>
+    </section>
+
+    <section id="servicios" class="services">
+      <div class="section-head">
+        <p class="eyebrow red">Lo que hacemos</p>
+        <h2>Soluciones de cerrajería para autos, casas, oficinas y comercios</h2>
+      </div>
+      <div class="grid">
+        <article class="service-card featured">
+          <div class="icon">🚗</div>
+          <h3>Llaves con chip</h3>
+          <p>Programación, reposición de llaves perdidas, controles, carcasas y reparación de controles automotrices.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon">🔓</div>
+          <h3>Abrimos la puerta de su casa al instante</h3>
+          <p>Servicio de apertura de autos, hechura de llaves y asistencia rápida a domicilio.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon">🏠</div>
+          <h3>Apertura de chapas</h3>
+          <p>Apertura de casas, oficinas y comercios. Instalación de chapas nuevas y cambios de registro.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="emergencia" class="split-section emergencia-doble-imagen">
+      <div class="image-panel">
+        <img src="assets/programacion-chip.png" alt="Programación de llaves con chip" />
+      </div>
+      <div class="image-panel">
+        <img src="assets/mujer-abiendo-puerta.jpeg" alt="Mujer intentando abrir una puerta" />
+      </div>
+      <div class="image-panel">
+        <img src="assets/Profesional(4).png" alt="Cerrajero profesional abriendo un vehículo" />
+      </div>
+    </section>
+
+    <section class="split-section reverse">
+      <div class="image-panel">
+        <img src="assets/cliente-llaves.jfif" alt="Persona buscando sus llaves frente a una puerta" />
+      </div>
+      <div class="copy-panel">
+        <p class="eyebrow red">Rápido y confiable</p>
+        <h2>Abrimos la puerta de su casa en instantes</h2>
+        <p>Cuando el tiempo apremia, un técnico puede asistirle para abrir su vehículo y resolver el problema de forma profesional.</p>
+        <a class="btn btn-outline-light whatsapp-link" href="#">📞 Llamar ahora</a>
+      </div>
+    </section>
+
+    
+    
+
+
+    <section class="split-section">
+      <div class="image-panel">
+        <img src="assets/cerrajero-puerta.png" alt="Cerrajero abriendo una puerta residencial" />
+      </div>
+      <div class="copy-panel">
+        <p class="eyebrow red">Casas y negocios</p>
+        <h2>Apertura de chapas, instalación y cambios de registro</h2>
+        <p>Servicio para casas, oficinas y comercios. Instalamos chapas nuevas y hacemos cambios de registro para mayor seguridad.</p>
+        <a class="btn btn-primary whatsapp-link" href="#">📞 Agendar servicio</a>
+      </div>
+    </section>
+
+    <section id="pagos" class="payment-section">
+      <div>
+        <p class="eyebrow red">Métodos de pago</p>
+        <h2>Aceptamos transferencias y pagos con tarjeta</h2>
+        <p>Para su comodidad, puede pagar de forma rápida y segura al finalizar el servicio.</p>
+      </div>
+      <div class="payment-icons">
+        <span>💳 Tarjeta</span>
+        <span>🏦 Transferencia</span>
+        
+      </div>
+    </section>
+
+    <section id="contacto" class="cta-final">
+      <h2>¿Necesita ayuda con sus llaves?</h2>
+      <p>Cubrimos todas las zonas. Escríbanos o llámenos para coordinar su servicio.</p>
+      <a class="btn btn-primary btn-large whatsapp-link" href="#">📞 Llamar ahora</a>
+      <div class="socials">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a class="whatsapp-link" href="#" aria-label="Llamar">☏</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Llaves 24.7 — Cerrajería automotriz y residencial.</p>
+  </footer>
+
+  <a class="floating-call whatsapp-link" href="#">📞</a>
+  <script src="script.js"></script>
+</body>
+</html>
