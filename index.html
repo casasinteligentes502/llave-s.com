@@ -2,9 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Llaves 24.7 | Cerrajería Automotriz y Residencial</title>
-  <meta name="description" content="Expertos en llaves con chip, controles, carcasas, apertura de autos, apertura de chapas, cambios de registro e instalación de chapas. Servicio rápido en todas las zonas." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#050505" />
+  <title>Llaves 24.7 | Cerrajería Profesional 24/7 en Guatemala</title>
+  <meta name="description" content="Cerrajería profesional 24/7 en Guatemala. Apertura de vehículos, casas y oficinas, cambio de cerraduras, llaves con chip, controles y atención rápida a domicilio." />
+  <meta name="keywords" content="cerrajería Guatemala, apertura de vehículos, apertura de puertas, cerrajero 24 horas, llaves con chip, cambio de cerraduras, apertura de casas, apertura de oficinas">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Llaves 24.7 | Cerrajería Profesional 24/7">
+  <meta property="og:description" content="Apertura de vehículos, casas y oficinas. Servicio rápido y profesional en Guatemala.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -57,6 +63,192 @@
         height:330px !important;
       }
     }
+
+
+    /* Optimización móvil: lectura, botones táctiles y carga visual */
+    img{
+      max-width:100%;
+      height:auto;
+    }
+
+    .whatsapp-link,
+    .btn,
+    .nav-cta{
+      touch-action:manipulation;
+    }
+
+    @media (max-width:768px){
+      body{
+        overflow-x:hidden;
+      }
+
+      .topbar{
+        padding:12px 14px !important;
+        gap:10px !important;
+        position:sticky !important;
+        top:0 !important;
+        z-index:1000 !important;
+        backdrop-filter:blur(12px) !important;
+      }
+
+      .brand-logo img{
+        max-width:130px !important;
+        height:auto !important;
+      }
+
+      .topbar nav{
+        display:flex !important;
+        gap:8px !important;
+        overflow-x:auto !important;
+        white-space:nowrap !important;
+        padding-bottom:4px !important;
+        scrollbar-width:none !important;
+      }
+
+      .topbar nav::-webkit-scrollbar{
+        display:none !important;
+      }
+
+      .topbar nav a{
+        font-size:13px !important;
+        padding:9px 10px !important;
+      }
+
+      .hero{
+        min-height:auto !important;
+        padding:48px 18px 34px !important;
+        display:flex !important;
+        flex-direction:column !important;
+        gap:22px !important;
+        text-align:center !important;
+      }
+
+      .hero-content h1{
+        font-size:clamp(34px, 11vw, 48px) !important;
+        line-height:1.05 !important;
+        margin-bottom:14px !important;
+      }
+
+      .hero-text{
+        font-size:17px !important;
+        line-height:1.55 !important;
+        max-width:100% !important;
+      }
+
+      .hero-actions{
+        display:grid !important;
+        grid-template-columns:1fr !important;
+        gap:12px !important;
+        width:100% !important;
+      }
+
+      .btn{
+        width:100% !important;
+        min-height:52px !important;
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+        font-size:16px !important;
+        border-radius:16px !important;
+      }
+
+      .trust-row{
+        display:grid !important;
+        grid-template-columns:1fr !important;
+        gap:8px !important;
+        margin-top:16px !important;
+        text-align:left !important;
+      }
+
+      .hero-card img,
+      .image-panel img{
+        max-height:340px !important;
+        object-fit:cover !important;
+      }
+
+      .services,
+      .payment-section,
+      .cta-final,
+      .split-section{
+        padding-left:18px !important;
+        padding-right:18px !important;
+      }
+
+      .section-head h2,
+      .copy-panel h2,
+      .payment-section h2,
+      .cta-final h2{
+        font-size:clamp(26px, 8vw, 36px) !important;
+        line-height:1.15 !important;
+      }
+
+      .grid{
+        grid-template-columns:1fr !important;
+        gap:16px !important;
+      }
+
+      .service-card{
+        padding:22px !important;
+      }
+
+      .split-section,
+      .split-section.reverse{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:20px !important;
+      }
+
+      #emergencia.emergencia-doble-imagen{
+        padding:32px 18px !important;
+        gap:16px !important;
+      }
+
+      #emergencia.emergencia-doble-imagen .image-panel{
+        min-height:240px !important;
+      }
+
+      #emergencia.emergencia-doble-imagen .image-panel img{
+        height:300px !important;
+      }
+
+      .payment-icons{
+        display:grid !important;
+        grid-template-columns:1fr !important;
+        gap:12px !important;
+      }
+
+      .cta-final{
+        padding-bottom:110px !important;
+      }
+
+      .floating-call{
+        width:64px !important;
+        height:64px !important;
+        right:18px !important;
+        bottom:calc(18px + env(safe-area-inset-bottom)) !important;
+        font-size:28px !important;
+        z-index:1001 !important;
+      }
+    }
+
+    @media (max-width:420px){
+      .topbar{
+        align-items:flex-start !important;
+      }
+
+      .topbar nav a:not(.nav-cta){
+        display:none !important;
+      }
+
+      .nav-cta{
+        font-weight:800 !important;
+      }
+
+      .hero{
+        padding-top:34px !important;
+      }
+    }
+
   </style>
 
 </head>
@@ -68,7 +260,7 @@
   </script>
 
   <header class="topbar">
-    <a href="#inicio" class="brand brand-logo"><img src="assets/logo-llaves247.png" alt="Llaves 24.7"></a>
+    <a href="#inicio" class="brand brand-logo"><img src="assets/logo-llaves247.png" alt="Llaves 24.7" width="220" height="90"></a>
     <nav>
       <a href="#servicios">Servicios</a>
       <a href="#emergencia">Emergencias</a>
@@ -84,7 +276,7 @@
         <h1>Expertos en llaves</h1>
         <p class="hero-text">Llaves con chip, controles, carcasas, reparación de controles y reposición de llaves perdidas de autos.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary whatsapp-link" href="#">📞 Llamar ahora</a>
+          <a class="btn btn-primary whatsapp-link" href="#" aria-label="Llamar a Llaves 24.7 ahora">📞 Llamar ahora</a>
           <a class="btn btn-outline" href="#servicios">Ver servicios</a>
         </div>
         <div class="trust-row">
@@ -94,7 +286,7 @@
         </div>
       </div>
       <div class="hero-card">
-        <img src="assets/programacion-chip.png" alt="Programación de llaves con chip" />
+        <img src="assets/programacion-chip.png" alt="Programación de llaves con chip" loading="eager" decoding="async" fetchpriority="high" />
       </div>
     </section>
 
@@ -128,19 +320,19 @@
 
     <section id="emergencia" class="split-section emergencia-doble-imagen">
       <div class="image-panel">
-        <img src="assets/programacion-chip.png" alt="Programación de llaves con chip" />
+        <img src="assets/programacion-chip.png" alt="Programación de llaves con chip" loading="lazy" decoding="async" />
       </div>
       <div class="image-panel">
-        <img src="assets/mujer-abiendo-puerta.jpeg" alt="Mujer intentando abrir una puerta" />
+        <img src="assets/mujer-abiendo-puerta.jpeg" alt="Mujer intentando abrir una puerta" loading="lazy" decoding="async" />
       </div>
       <div class="image-panel">
-        <img src="assets/Profesional(4).png" alt="Cerrajero profesional abriendo un vehículo" />
+        <img src="assets/Profesional(4).png" alt="Cerrajero profesional abriendo un vehículo" loading="lazy" decoding="async" />
       </div>
     </section>
 
     <section class="split-section reverse">
       <div class="image-panel">
-        <img src="assets/cliente-llaves.jfif" alt="Persona buscando sus llaves frente a una puerta" />
+        <img src="assets/cliente-llaves.jfif" alt="Persona buscando sus llaves frente a una puerta" loading="lazy" decoding="async" />
       </div>
       <div class="copy-panel">
         <p class="eyebrow red">Rápido y confiable</p>
@@ -156,7 +348,7 @@
 
     <section class="split-section">
       <div class="image-panel">
-        <img src="assets/cerrajero-puerta.png" alt="Cerrajero abriendo una puerta residencial" />
+        <img src="assets/cerrajero-puerta.png" alt="Cerrajero abriendo una puerta residencial" loading="lazy" decoding="async" />
       </div>
       <div class="copy-panel">
         <p class="eyebrow red">Casas y negocios</p>
@@ -195,7 +387,7 @@
     <p>© 2026 Llaves 24.7 — Cerrajería automotriz y residencial.</p>
   </footer>
 
-  <a class="floating-call whatsapp-link" href="#">📞</a>
+  <a class="floating-call whatsapp-link" href="#" aria-label="Llamar a Llaves 24.7">📞</a>
   <script src="script.js"></script>
 </body>
 </html>
