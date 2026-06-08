@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
 // Scroll corregido para submenús: deja cada sección exactamente debajo del header
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.topbar');
@@ -26,7 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const headerHeight = header ? header.offsetHeight : 0;
       const extraSpace = 18;
-      const top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - extraSpace;
+
+      const top =
+        target.getBoundingClientRect().top +
+        window.pageYOffset -
+        headerHeight -
+        extraSpace;
 
       window.scrollTo({
         top: Math.max(top, 0),
@@ -37,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Corrige si la página abre con un #servicios, #pagos, etc.
   if (window.location.hash) {
     setTimeout(() => {
       const target = document.querySelector(window.location.hash);
@@ -44,7 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const headerHeight = header ? header.offsetHeight : 0;
       const extraSpace = 18;
-      const top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - extraSpace;
+
+      const top =
+        target.getBoundingClientRect().top +
+        window.pageYOffset -
+        headerHeight -
+        extraSpace;
 
       window.scrollTo({
         top: Math.max(top, 0),
