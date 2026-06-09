@@ -54,6 +54,20 @@
       padding:10px !important;
     }
 
+    #emergencia.emergencia-doble-imagen .feature-text-panel{
+      padding:38px !important;
+      text-align:left !important;
+      justify-content:flex-start !important;
+    }
+
+    #emergencia.emergencia-doble-imagen .feature-text-panel h2{
+      font-size:clamp(30px,3.4vw,52px) !important;
+      line-height:1.18 !important;
+      margin:18px 0 0 !important;
+      color:#fff !important;
+      text-shadow:0 0 24px rgba(255,255,255,.10) !important;
+    }
+
     @media (max-width:900px){
       #emergencia.emergencia-doble-imagen{
         grid-template-columns:1fr !important;
@@ -211,6 +225,12 @@
         height:300px !important;
       }
 
+
+      #emergencia.emergencia-doble-imagen .feature-text-panel{
+        min-height:300px !important;
+        padding:28px !important;
+      }
+
       .payment-icons{
         display:grid !important;
         grid-template-columns:1fr !important;
@@ -249,7 +269,19 @@
       }
     }
 
-  </style>
+  
+.hero{
+  display:flex !important;
+  justify-content:flex-end !important;
+}
+
+.hero-content{
+  max-width:700px !important;
+  margin-left:auto !important;
+  text-align:left !important;
+}
+
+</style>
 
 </head>
 <body>
@@ -284,13 +316,15 @@
           <span>✅ Paga con Tarjeta o transferencia</span>
         </div>
       </div>
-      <div class="hero-card">
-        <img src="assets/programacion-chip2.png" alt="Programación de llaves con chip" loading="eager" decoding="async" fetchpriority="high" />
-      </div>
     </section>
 
     <section class="slogan">
       <p>Abrimos su tranquilidad, no solo sus puertas.</p>
+    </section>
+
+    <section class="section-head" style="padding:60px 7% 20px;text-align:center;">
+      <p class="eyebrow red">Lo que hacemos</p>
+      <h2>Soluciones de cerrajería para autos, casas, oficinas y comercios</h2>
     </section>
 
    
@@ -332,10 +366,6 @@
       </div>
     </section>
  <section id="servicios" class="services">
-      <div class="section-head">
-        <p class="eyebrow red">Lo que hacemos</p>
-        <h2>Soluciones de cerrajería para autos, casas, oficinas y comercios</h2>
-      </div>
       <div class="grid">
         <article class="service-card featured">
           <h3>Llaves con chip</h3>

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const phone = window.PHONE || '50258453733';
 
-  // Botones de contacto: llamada directa, no WhatsApp
+  // Botones de contacto: llamada directa
   document.querySelectorAll('.whatsapp-link, .nav-cta').forEach(link => {
     link.href = `tel:+${phone}`;
     link.removeAttribute('target');
@@ -9,16 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Scroll corregido para submenús: deja cada sección exactamente debajo del header
+// Scroll corregido para submenús
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.topbar');
 
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     const href = link.getAttribute('href');
+
     if (!href || href === '#') return;
 
     link.addEventListener('click', (e) => {
       const target = document.querySelector(href);
+
       if (!target) return;
 
       e.preventDefault();
@@ -41,10 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Corrige si la página abre con un #servicios, #pagos, etc.
+  // Corrige si la página abre con un hash (#servicios, #pagos, etc.)
   if (window.location.hash) {
     setTimeout(() => {
       const target = document.querySelector(window.location.hash);
+
       if (!target) return;
 
       const headerHeight = header ? header.offsetHeight : 0;
