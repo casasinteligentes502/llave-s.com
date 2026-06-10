@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const phone = window.PHONE || '50258453733';
 
-    // Todos los botones llaman directamente
+    // Convierte todos los botones en llamada telefónica
     document.querySelectorAll('.whatsapp-link, .nav-cta').forEach(link => {
         link.href = `tel:+${phone}`;
         link.removeAttribute('target');
         link.removeAttribute('rel');
     });
 
-    // Navegación suave entre secciones
+    // Scroll suave para navegación interna
     const header = document.querySelector('.topbar');
 
     document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -41,10 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             history.pushState(null, '', href);
+
         });
+
     });
 
-    // Si la página abre con un ancla (#servicios, #pagos, etc.)
+    // Corrige posición cuando se abre con #servicios, #pagos, etc.
     if (window.location.hash) {
 
         setTimeout(() => {
@@ -68,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
         }, 100);
+
     }
 
     // Efecto visual al hacer scroll
@@ -81,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    // Animación suave de aparición
+    // Animación de aparición suave
     const observer = new IntersectionObserver((entries) => {
 
         entries.forEach(entry => {
@@ -100,6 +103,19 @@ document.addEventListener('DOMContentLoaded', () => {
         '.service-card, .image-panel, .copy-panel, .section-head, .payment-section, .cta-final'
     ).forEach(el => {
         observer.observe(el);
+    });
+
+    // Precarga de imágenes para una carga más fluida
+    document.querySelectorAll('img').forEach(img => {
+
+        if (img.complete) {
+            img.classList.add('loaded');
+        } else {
+            img.addEventListener('load', () => {
+                img.classList.add('loaded');
+            });
+        }
+
     });
 
 });

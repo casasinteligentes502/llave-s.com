@@ -937,3 +937,49 @@ section[id]{
     font-size:11px !important;
   }
 }
+
+/* ===== CORRECCIÓN FINAL: MUJER COMPLETA EN SECCIÓN "RÁPIDO Y CONFIABLE" ===== */
+/* Esta regla va al final para que domine todos los ajustes anteriores */
+.split-section.reverse .image-panel{
+  background:#050505 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  overflow:hidden !important;
+  border-radius:30px !important;
+}
+
+.split-section.reverse .image-panel img{
+  width:100% !important;
+  height:560px !important;
+  object-fit:contain !important;
+  object-position:center top !important;
+  background:#050505 !important;
+  padding:0 !important;
+  border-radius:30px !important;
+}
+
+/* En tablet y celular mantiene la cabeza completa y la imagen proporcionada */
+@media (max-width:1000px){
+  .split-section.reverse .image-panel img{
+    height:520px !important;
+    object-fit:contain !important;
+    object-position:center top !important;
+  }
+}
+
+@media (max-width:768px){
+  .split-section.reverse .image-panel img{
+    height:430px !important;
+    object-fit:contain !important;
+    object-position:center top !important;
+  }
+}
+
+@media (max-width:480px){
+  .split-section.reverse .image-panel img{
+    height:380px !important;
+    object-fit:contain !important;
+    object-position:center top !important;
+  }
+}
