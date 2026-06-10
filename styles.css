@@ -481,3 +481,459 @@ section[id]{
     max-height:70px !important;
   }
 }
+
+/* ===== ORDEN Y TAMAÑOS CORREGIDOS - JUNIO 2026 ===== */
+body{
+  overflow-x:hidden;
+}
+
+.topbar{
+  min-height:118px !important;
+  padding:14px 6% !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:24px !important;
+}
+
+.brand-logo{
+  flex:0 1 430px !important;
+}
+
+.brand-logo img{
+  width:430px !important;
+  max-width:100% !important;
+  height:95px !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+}
+
+.topbar nav{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  gap:18px !important;
+  margin-left:auto !important;
+}
+
+.hero{
+  min-height:72vh !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  padding:70px 7% 64px !important;
+  text-align:left !important;
+}
+
+.hero-content{
+  width:100% !important;
+  max-width:780px !important;
+  margin-left:auto !important;
+  position:relative !important;
+  z-index:2 !important;
+}
+
+.hero h1{
+  font-size:clamp(38px,5.4vw,74px) !important;
+  line-height:1.03 !important;
+  margin:10px 0 18px !important;
+  max-width:780px !important;
+}
+
+.hero-text{
+  font-size:clamp(17px,2vw,22px) !important;
+  line-height:1.55 !important;
+  max-width:650px !important;
+}
+
+.hero-actions{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:14px !important;
+  margin:28px 0 0 !important;
+}
+
+.trust-row{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:14px 22px !important;
+  margin-top:22px !important;
+  font-size:16px !important;
+}
+
+.expert-head,
+.section-head{
+  max-width:980px !important;
+  margin:0 auto !important;
+  padding:70px 7% 28px !important;
+  text-align:center !important;
+}
+
+.section-head h2,
+.copy-panel h2,
+.payment-section h2,
+.cta-final h2{
+  font-size:clamp(30px,3.8vw,50px) !important;
+  line-height:1.12 !important;
+  margin:10px 0 16px !important;
+}
+
+#emergencia.emergencia-doble-imagen{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:24px !important;
+  align-items:stretch !important;
+  padding:44px 7% 80px !important;
+  background:linear-gradient(180deg,#080808,#111) !important;
+}
+
+#emergencia.emergencia-doble-imagen .image-panel{
+  min-height:0 !important;
+  height:auto !important;
+  border-radius:28px !important;
+  overflow:hidden !important;
+  background:#050505 !important;
+  border:1px solid rgba(255,255,255,.12) !important;
+  box-shadow:0 22px 60px rgba(0,0,0,.46) !important;
+}
+
+#emergencia.emergencia-doble-imagen .image-panel img{
+  width:100% !important;
+  height:390px !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  padding:0 !important;
+  border-radius:28px !important;
+}
+
+#emergencia.emergencia-doble-imagen .image-panel:first-child img{
+  object-fit:contain !important;
+  padding:10px !important;
+  background:#050505 !important;
+}
+
+.split-section,
+.split-section.reverse{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+  gap:42px !important;
+  align-items:center !important;
+  padding:82px 7% !important;
+}
+
+.image-panel{
+  border-radius:30px !important;
+  overflow:hidden !important;
+}
+
+.image-panel img{
+  width:100% !important;
+  height:460px !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  border-radius:30px !important;
+}
+
+.split-section.reverse .image-panel img{
+  object-fit:cover !important;
+  object-position:center center !important;
+  background:#050505 !important;
+  padding:0 !important;
+}
+
+.copy-panel{
+  padding:10px 8px !important;
+}
+
+.services{
+  padding:80px 7% 90px !important;
+}
+
+.services .section-head{
+  padding:0 0 34px !important;
+}
+
+.grid{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:22px !important;
+}
+
+.service-card h3{
+  font-size:clamp(21px,2vw,26px) !important;
+  line-height:1.18 !important;
+}
+
+.payment-section{
+  padding:90px 7% !important;
+}
+
+.cta-final{
+  padding:90px 7% 110px !important;
+}
+
+html{
+  scroll-padding-top:135px !important;
+}
+
+section[id]{
+  scroll-margin-top:135px !important;
+}
+
+@media (max-width:1000px){
+  .topbar{
+    min-height:auto !important;
+  }
+
+  .brand-logo{
+    flex-basis:280px !important;
+  }
+
+  .brand-logo img{
+    width:280px !important;
+    height:80px !important;
+  }
+
+  #emergencia.emergencia-doble-imagen,
+  .grid{
+    grid-template-columns:1fr !important;
+  }
+
+  #emergencia.emergencia-doble-imagen .image-panel img,
+  .image-panel img{
+    height:360px !important;
+  }
+
+  .split-section,
+  .split-section.reverse{
+    grid-template-columns:1fr !important;
+  }
+}
+
+@media (max-width:768px){
+  .topbar{
+    padding:10px 14px !important;
+    gap:10px !important;
+  }
+
+  .brand-logo img{
+    width:185px !important;
+    height:62px !important;
+  }
+
+  .topbar nav{
+    gap:8px !important;
+    overflow-x:auto !important;
+    white-space:nowrap !important;
+  }
+
+  .topbar nav a{
+    font-size:12px !important;
+    padding:8px 9px !important;
+  }
+
+  .hero{
+    min-height:auto !important;
+    padding:48px 18px 42px !important;
+    text-align:center !important;
+    justify-content:center !important;
+  }
+
+  .hero-content{
+    margin:0 auto !important;
+    text-align:center !important;
+  }
+
+  .hero h1{
+    font-size:clamp(31px,9.5vw,46px) !important;
+  }
+
+  .hero-actions{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    width:100% !important;
+  }
+
+  .btn{
+    width:100% !important;
+    border-radius:16px !important;
+  }
+
+  .trust-row{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    text-align:left !important;
+  }
+
+  .expert-head,
+  .section-head,
+  .services,
+  .payment-section,
+  .cta-final,
+  .split-section,
+  .split-section.reverse,
+  #emergencia.emergencia-doble-imagen{
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+
+  .expert-head,
+  .section-head{
+    padding-top:50px !important;
+  }
+
+  #emergencia.emergencia-doble-imagen{
+    padding-top:28px !important;
+    padding-bottom:54px !important;
+  }
+
+  #emergencia.emergencia-doble-imagen .image-panel img,
+  .image-panel img{
+    height:300px !important;
+  }
+
+  .split-section,
+  .split-section.reverse{
+    padding-top:58px !important;
+    padding-bottom:58px !important;
+    gap:22px !important;
+  }
+
+  html{
+    scroll-padding-top:90px !important;
+  }
+
+  section[id]{
+    scroll-margin-top:90px !important;
+  }
+}
+
+
+/* ===== AJUSTE DE TÍTULOS RECOMENDADO ===== */
+/* Hace que "Lo que hacemos" tenga más presencia */
+.eyebrow{
+  font-size:20px !important;
+  font-weight:900 !important;
+  letter-spacing:3px !important;
+}
+
+.hero .eyebrow{
+  font-size:22px !important;
+  margin-bottom:14px !important;
+}
+
+/* Reduce el título principal para que no se vea exagerado */
+.hero h1{
+  font-size:clamp(28px,3.8vw,52px) !important;
+  line-height:1.12 !important;
+  max-width:900px !important;
+  margin:10px 0 18px !important;
+}
+
+/* Agranda "Expertos en llaves" */
+.expert-head .eyebrow{
+  font-size:26px !important;
+  margin-bottom:18px !important;
+}
+
+/* Reduce el contenido del título de expertos para que se vea profesional */
+.expert-head h2{
+  font-size:clamp(24px,2.8vw,42px) !important;
+  line-height:1.25 !important;
+  max-width:1100px !important;
+  margin:0 auto !important;
+}
+
+/* Mejora el aire visual del bloque */
+.expert-head{
+  padding-top:90px !important;
+  padding-bottom:30px !important;
+}
+
+/* Ajustes móviles */
+@media (max-width:768px){
+  .hero .eyebrow{
+    font-size:17px !important;
+  }
+
+  .hero h1{
+    font-size:clamp(28px,8vw,40px) !important;
+    line-height:1.14 !important;
+  }
+
+  .expert-head .eyebrow{
+    font-size:20px !important;
+  }
+
+  .expert-head h2{
+    font-size:clamp(22px,6.5vw,32px) !important;
+    line-height:1.25 !important;
+  }
+}
+
+/* ===== LOGO OPTIMIZADO Y MÁS VISIBLE - FINAL ===== */
+/* Se coloca al final para dominar ajustes anteriores del logo */
+.brand-logo{
+  flex:0 0 auto !important;
+}
+
+.brand-logo img{
+  width:540px !important;
+  max-width:100% !important;
+  height:120px !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+  background:transparent !important;
+  border:none !important;
+  box-shadow:none !important;
+  border-radius:0 !important;
+  padding:0 !important;
+}
+
+.topbar{
+  min-height:130px !important;
+  padding:14px 6% !important;
+  align-items:center !important;
+}
+
+@media (max-width:768px){
+  .topbar{
+    min-height:95px !important;
+    padding:10px 14px !important;
+    gap:10px !important;
+  }
+
+  .brand-logo{
+    flex:0 0 auto !important;
+  }
+
+  .brand-logo img{
+    width:260px !important;
+    height:90px !important;
+    max-width:260px !important;
+    object-fit:contain !important;
+    object-position:left center !important;
+  }
+
+  .topbar nav{
+    gap:8px !important;
+    overflow-x:auto !important;
+    white-space:nowrap !important;
+  }
+}
+
+@media (max-width:480px){
+  .topbar{
+    padding:10px 12px !important;
+    min-height:90px !important;
+  }
+
+  .brand-logo img{
+    width:240px !important;
+    height:auto !important;
+    max-width:240px !important;
+  }
+
+  .topbar nav a{
+    font-size:11px !important;
+  }
+}

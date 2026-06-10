@@ -1,68 +1,105 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const phone = window.PHONE || '50258453733';
 
-  // Botones de contacto: llamada directa
-  document.querySelectorAll('.whatsapp-link, .nav-cta').forEach(link => {
-    link.href = `tel:+${phone}`;
-    link.removeAttribute('target');
-    link.removeAttribute('rel');
-  });
-});
+    const phone = window.PHONE || '50258453733';
 
-// Scroll corregido para submenús
-document.addEventListener('DOMContentLoaded', () => {
-  const header = document.querySelector('.topbar');
-
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    const href = link.getAttribute('href');
-
-    if (!href || href === '#') return;
-
-    link.addEventListener('click', (e) => {
-      const target = document.querySelector(href);
-
-      if (!target) return;
-
-      e.preventDefault();
-
-      const headerHeight = header ? header.offsetHeight : 0;
-      const extraSpace = 18;
-
-      const top =
-        target.getBoundingClientRect().top +
-        window.pageYOffset -
-        headerHeight -
-        extraSpace;
-
-      window.scrollTo({
-        top: Math.max(top, 0),
-        behavior: 'smooth'
-      });
-
-      history.pushState(null, '', href);
+    // Todos los botones llaman directamente
+    document.querySelectorAll('.whatsapp-link, .nav-cta').forEach(link => {
+        link.href = `tel:+${phone}`;
+        link.removeAttribute('target');
+        link.removeAttribute('rel');
     });
-  });
 
-  // Corrige si la página abre con un hash (#servicios, #pagos, etc.)
-  if (window.location.hash) {
-    setTimeout(() => {
-      const target = document.querySelector(window.location.hash);
+    // Navegación suave entre secciones
+    const header = document.querySelector('.topbar');
 
-      if (!target) return;
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-      const headerHeight = header ? header.offsetHeight : 0;
-      const extraSpace = 18;
+        const href = link.getAttribute('href');
 
-      const top =
-        target.getBoundingClientRect().top +
-        window.pageYOffset -
-        headerHeight -
-        extraSpace;
+        if (!href || href === '#') return;
 
-      window.scrollTo({
-        top: Math.max(top, 0),
-        behavior: 'auto'
-      });
-    }, 80);
-  }
+        link.addEventListener('click', (e) => {
+
+            const target = document.querySelector(href);
+
+            if (!target) return;
+
+            e.preventDefault();
+
+            const headerHeight = header ? header.offsetHeight : 0;
+            const extraSpace = 20;
+
+            const position =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerHeight -
+                extraSpace;
+
+            window.scrollTo({
+                top: Math.max(position, 0),
+                behavior: 'smooth'
+            });
+
+            history.pushState(null, '', href);
+        });
+    });
+
+    // Si la página abre con un ancla (#servicios, #pagos, etc.)
+    if (window.location.hash) {
+
+        setTimeout(() => {
+
+            const target = document.querySelector(window.location.hash);
+
+            if (!target) return;
+
+            const headerHeight = header ? header.offsetHeight : 0;
+            const extraSpace = 20;
+
+            const position =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerHeight -
+                extraSpace;
+
+            window.scrollTo({
+                top: Math.max(position, 0),
+                behavior: 'auto'
+            });
+
+        }, 100);
+    }
+
+    // Efecto visual al hacer scroll
+    window.addEventListener('scroll', () => {
+
+        if (window.scrollY > 60) {
+            document.body.classList.add('scrolling');
+        } else {
+            document.body.classList.remove('scrolling');
+        }
+
+    });
+
+    // Animación suave de aparición
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    document.querySelectorAll(
+        '.service-card, .image-panel, .copy-panel, .section-head, .payment-section, .cta-final'
+    ).forEach(el => {
+        observer.observe(el);
+    });
+
 });

@@ -15,284 +15,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    #emergencia.emergencia-doble-imagen{
-      display:grid !important;
-      grid-template-columns:1fr 1fr 1fr !important;
-      gap:24px !important;
-      align-items:center !important;
-      padding:70px 6% !important;
-    }
-
-    #emergencia.emergencia-doble-imagen .image-panel{
-      width:100% !important;
-      min-height:360px !important;
-      border-radius:28px !important;
-      overflow:hidden !important;
-      background:#050505 !important;
-      border:1px solid rgba(255,255,255,.12) !important;
-      box-shadow:0 24px 70px rgba(0,0,0,.55) !important;
-      display:flex !important;
-      align-items:center !important;
-      justify-content:center !important;
-    }
-
-    #emergencia.emergencia-doble-imagen .image-panel img{
-      width:100% !important;
-      height:430px !important;
-      object-fit:cover !important;
-      object-position:center center !important;
-      border-radius:28px !important;
-      padding:0 !important;
-      background:#050505 !important;
-      display:block !important;
-    }
-
-    #emergencia.emergencia-doble-imagen .image-panel:first-child img{
-      object-fit:contain !important;
-      padding:10px !important;
-    }
-
-    #emergencia.emergencia-doble-imagen .feature-text-panel{
-      padding:38px !important;
-      text-align:left !important;
-      justify-content:flex-start !important;
-    }
-
-    #emergencia.emergencia-doble-imagen .feature-text-panel h2{
-      font-size:clamp(30px,3.4vw,52px) !important;
-      line-height:1.18 !important;
-      margin:18px 0 0 !important;
-      color:#fff !important;
-      text-shadow:0 0 24px rgba(255,255,255,.10) !important;
-    }
-
-    @media (max-width:900px){
-      #emergencia.emergencia-doble-imagen{
-        grid-template-columns:1fr !important;
-      }
-
-      #emergencia.emergencia-doble-imagen .image-panel img{
-        height:330px !important;
-      }
-    }
-
-
-    /* Optimización móvil: lectura, botones táctiles y carga visual */
-    img{
-      max-width:100%;
-      height:auto;
-    }
-
-    .whatsapp-link,
-    .btn,
-    .nav-cta{
-      touch-action:manipulation;
-    }
-
-    @media (max-width:768px){
-      body{
-        overflow-x:hidden;
-      }
-
-      .topbar{
-        padding:12px 14px !important;
-        gap:10px !important;
-        position:sticky !important;
-        top:0 !important;
-        z-index:1000 !important;
-        backdrop-filter:blur(12px) !important;
-      }
-
-      .brand-logo img{
-        max-width:130px !important;
-        height:auto !important;
-      }
-
-      .topbar nav{
-        display:flex !important;
-        gap:8px !important;
-        overflow-x:auto !important;
-        white-space:nowrap !important;
-        padding-bottom:4px !important;
-        scrollbar-width:none !important;
-      }
-
-      .topbar nav::-webkit-scrollbar{
-        display:none !important;
-      }
-
-      .topbar nav a{
-        font-size:13px !important;
-        padding:9px 10px !important;
-      }
-
-      .hero{
-        min-height:auto !important;
-        padding:48px 18px 34px !important;
-        display:flex !important;
-        flex-direction:column !important;
-        gap:22px !important;
-        text-align:center !important;
-      }
-
-      .hero-content h1{
-        font-size:clamp(34px, 11vw, 48px) !important;
-        line-height:1.05 !important;
-        margin-bottom:14px !important;
-      }
-
-      .hero-text{
-        font-size:17px !important;
-        line-height:1.55 !important;
-        max-width:100% !important;
-      }
-
-      .hero-actions{
-        display:grid !important;
-        grid-template-columns:1fr !important;
-        gap:12px !important;
-        width:100% !important;
-      }
-
-      .btn{
-        width:100% !important;
-        min-height:52px !important;
-        display:flex !important;
-        align-items:center !important;
-        justify-content:center !important;
-        font-size:16px !important;
-        border-radius:16px !important;
-      }
-
-      .trust-row{
-        display:grid !important;
-        grid-template-columns:1fr !important;
-        gap:8px !important;
-        margin-top:16px !important;
-        text-align:left !important;
-      }
-
-      .hero-card img,
-      .image-panel img{
-        max-height:340px !important;
-        object-fit:cover !important;
-      }
-
-      .services,
-      .payment-section,
-      .cta-final,
-      .split-section{
-        padding-left:18px !important;
-        padding-right:18px !important;
-      }
-
-      .section-head h2,
-      .copy-panel h2,
-      .payment-section h2,
-      .cta-final h2{
-        font-size:clamp(26px, 8vw, 36px) !important;
-        line-height:1.15 !important;
-      }
-
-      .grid{
-        grid-template-columns:1fr !important;
-        gap:16px !important;
-      }
-
-      .service-card{
-        padding:22px !important;
-      }
-
-      .split-section,
-      .split-section.reverse{
-        display:flex !important;
-        flex-direction:column !important;
-        gap:20px !important;
-      }
-
-      #emergencia.emergencia-doble-imagen{
-        padding:32px 18px !important;
-        gap:16px !important;
-      }
-
-      #emergencia.emergencia-doble-imagen .image-panel{
-        min-height:240px !important;
-      }
-
-      #emergencia.emergencia-doble-imagen .image-panel img{
-        height:300px !important;
-      }
-
-
-      #emergencia.emergencia-doble-imagen .feature-text-panel{
-        min-height:300px !important;
-        padding:28px !important;
-      }
-
-      .payment-icons{
-        display:grid !important;
-        grid-template-columns:1fr !important;
-        gap:12px !important;
-      }
-
-      .cta-final{
-        padding-bottom:110px !important;
-      }
-
-      .floating-call{
-        width:64px !important;
-        height:64px !important;
-        right:18px !important;
-        bottom:calc(18px + env(safe-area-inset-bottom)) !important;
-        font-size:28px !important;
-        z-index:1001 !important;
-      }
-    }
-
-    @media (max-width:420px){
-      .topbar{
-        align-items:flex-start !important;
-      }
-
-      .topbar nav a:not(.nav-cta){
-        display:none !important;
-      }
-
-      .nav-cta{
-        font-weight:800 !important;
-      }
-
-      .hero{
-        padding-top:34px !important;
-      }
-    }
-
-  
-.hero{
-  display:flex !important;
-  justify-content:flex-end !important;
-}
-
-.hero-content{
-  max-width:700px !important;
-  margin-left:auto !important;
-  text-align:left !important;
-}
-
-</style>
-
 </head>
 <body>
-  <!-- CAMBIAR AQUÍ: teléfono y redes cuando el cliente los entregue -->
   <script>
     const PHONE = "50258453733";
     const WHATSAPP_TEXT = "Hola Llave-s.com, necesito ayuda con una llave o apertura.";
   </script>
 
   <header class="topbar">
-    <a href="#inicio" class="brand brand-logo"><img src="assets/logo-llaves247.png" alt="Llave-s.com" width="220" height="90"></a>
+    <a href="#inicio" class="brand brand-logo">
+      <img src="assets/logo-llaves247.png" alt="Llave-s.com" width="220" height="90">
+    </a>
     <nav>
       <a href="#servicios">Servicios</a>
       <a href="#emergencia">Emergencias</a>
@@ -305,15 +38,16 @@
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1>Expertos en llaves</h1>
-        <p class="hero-text">Llaves con chip, controles, carcasas, reparación de controles y reposición de llaves perdidas de autos.</p>
+        <p class="eyebrow red">Lo que hacemos</p>
+        <h1>Soluciones de cerrajería para autos, casas, oficinas y comercios</h1>
+        <p class="hero-text">Servicio profesional de cerrajería para vehículos, casas, oficinas y negocios en toda Guatemala.</p>
         <div class="hero-actions">
           <a class="btn btn-primary whatsapp-link" href="#" aria-label="Llamar a Llave-s.com ahora">📞 Llamar ahora</a>
           <a class="btn btn-outline" href="#servicios">Ver servicios</a>
         </div>
         <div class="trust-row">
           <span>✅ Todas las zonas a domicilio</span>
-          <span>✅ Paga con Tarjeta o transferencia</span>
+          <span>✅ Paga con tarjeta o transferencia</span>
         </div>
       </div>
     </section>
@@ -322,12 +56,11 @@
       <p>Abrimos su tranquilidad, no solo sus puertas.</p>
     </section>
 
-    <section class="section-head" style="padding:60px 7% 20px;text-align:center;">
-      <p class="eyebrow red">Lo que hacemos</p>
-      <h2>Soluciones de cerrajería para autos, casas, oficinas y comercios</h2>
+    <section class="section-head expert-head">
+      <p class="eyebrow red">Expertos en llaves</p>
+      <h2>Llaves con chip, controles, carcasas, reparación de controles y reposición de llaves perdidas de autos.</h2>
     </section>
 
-   
     <section id="emergencia" class="split-section emergencia-doble-imagen">
       <div class="image-panel">
         <img src="assets/programacion-chip2.png" alt="Programación de llaves con chip" loading="lazy" decoding="async" />
@@ -347,13 +80,11 @@
       <div class="copy-panel">
         <p class="eyebrow red">Rápido y confiable</p>
         <h2>Abrimos la puerta de su casa en instantes</h2>
-        <p>Cuando el tiempo apremia, un técnico puede asistirle para abrir su vehículo y resolver el problema de forma profesional.</p>
+        <p>Cuando el tiempo apremia, un técnico puede asistirle para abrir su puerta y resolver el problema de forma profesional.</p>
         <a class="btn btn-outline-light whatsapp-link" href="#">📞 Llamar ahora</a>
       </div>
     </section>
 
-    
-    
     <section class="split-section">
       <div class="image-panel">
         <img src="assets/cerrajero-puerta.png" alt="Cerrajero abriendo una puerta residencial" loading="lazy" decoding="async" />
@@ -365,7 +96,12 @@
         <a class="btn btn-primary whatsapp-link" href="#">📞 Agendar servicio</a>
       </div>
     </section>
- <section id="servicios" class="services">
+
+    <section id="servicios" class="services">
+      <div class="section-head">
+        <p class="eyebrow red">Servicios</p>
+        <h2>Atención profesional para autos, casas y negocios</h2>
+      </div>
       <div class="grid">
         <article class="service-card featured">
           <h3>Llaves con chip</h3>
@@ -391,7 +127,6 @@
       <div class="payment-icons">
         <span>💳 Tarjeta</span>
         <span>🏦 Transferencia</span>
-        
       </div>
     </section>
 
