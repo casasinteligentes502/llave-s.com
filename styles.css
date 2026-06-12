@@ -983,3 +983,42 @@ section[id]{
     object-position:center top !important;
   }
 }
+
+
+/* ===== AJUSTE FINAL TEXTO: REPARACIÓN DE LLAVES ===== */
+.split-section.reverse .copy-panel h2{
+  font-size:clamp(32px,3vw,48px) !important;
+  line-height:1.15 !important;
+  margin-bottom:20px !important;
+}
+
+.split-section.reverse .copy-panel p:not(.eyebrow){
+  font-size:20px !important;
+  line-height:1.8 !important;
+  max-width:700px !important;
+}
+
+@media (max-width:768px){
+  .split-section.reverse .copy-panel h2{
+    font-size:32px !important;
+  }
+
+  .split-section.reverse .copy-panel p:not(.eyebrow){
+    font-size:17px !important;
+    line-height:1.7 !important;
+  }
+}
+
+
+/* ===== CORRECCIÓN APERTURA DE AUTOS EN MINUTOS ===== */
+#emergencia.emergencia-doble-imagen .image-panel{
+  overflow:visible !important;
+}
+
+#emergencia.emergencia-doble-imagen .image-panel img{
+  height:460px !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#050505 !important;
+  padding:8px !important;
+}
